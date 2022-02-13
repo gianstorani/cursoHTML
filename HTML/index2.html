@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Página de prueba de formularios</title>
+</head>
+<body>
+    <form action="/prueba" method="POST">
+        <div>
+            <label>Nombre</label>
+            <input type="text" name = "nombre" />
+        </div>
+        <div>
+            <label">Apellido</label>
+            <input type="text" name = "apellido" />
+        </div>
+        <div>
+            <label>Edad</label>
+            <input type="number" name = "edad" />
+        </div>
+        <div>
+            <label>Nacionalidad</label>
+            <select name = "pais">
+                <option value="1">Argentina</option>
+                <option value="2">Brasil</option>
+                <option value="3">Chile</option>
+                <option value="4">Uruguay</option>
+                <option value="5">Colombia</option>
+                <option value="6">Mexico</option>
+            </select>
+        </div>
+        <div>
+            <label>Sos mayor de edad</label>
+            <input type="radio" name="mayorEdad" id="mayorYes"> 
+            <label for="mayorYes">Si</label>
+            <input type="radio" name="mayorEdad" id="mayorNo">
+            <label for="mayorNo">No</label>
+        </div>
+        <div>
+            <label>Selecciona tus hobbies</label>
+            <input name = "hobbies-fut" type="checkbox" id="cb-futbol">
+            <label for="cb-futbol">Futbol</label>
+            <input name = "hobbies-bas" type="checkbox" id="cb-basquet">
+            <label for="cb-basquet">Basquet</label>
+            <input name = "hobbies" type="checkbox" id="cb-programar">
+            <label for="cb-programar-prog">Programar</label>
+        </div>
+        <div>
+            <input type="submit" />
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+div {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+}
+
+.cuadrado1 { 
+    background-color: red;
+}
+
+.cuadrado2 {
+    background-color: blue;
+}
+
+.cuadrado3 {
+    background-color: green;
+}
+
+.container {
+    height: 600px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}

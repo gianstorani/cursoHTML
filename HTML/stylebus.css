@@ -1,0 +1,36 @@
+body{
+    background-color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    height: 50px;
+}
+
+.busqueda{
+    margin-top: 5px;
+    position: fixed;
+    color: #9d96a5;
+    height: 30px;
+    width: 200px;
+    background-color: #3f334c;
+    border-radius: 20px;
+    right: 15px;
+    /*top: 10px;  agregue al flex align content center*/
+    /*left: 80%;        agregue el flex - flexend*/ 
+}
+
+.botonx{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    background-color: #de2668;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: larger;
+    /*top: 10px;  agregue al flex align content center*/
+    /*left: 93%;*/
+}

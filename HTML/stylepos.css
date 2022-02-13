@@ -1,0 +1,46 @@
+div{
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+}
+
+.cuadrado1 {
+    background-color: red;
+}
+
+.cuadrado2 {
+    background-color: blue;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.cuadrado3 {
+    background-color: green;
+}
+
+.busqueda {
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 50px;
+    color: #9992a0;
+    background-color: #3f334c;
+    position: fixed;
+    top: 50px;
+    left: 80%;
+}
+
+.cancelarBusqueda {
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    color: #17030b;
+    background-color: #de2668;
+    position: fixed;
+    top: 45px;
+    left: 85%;
+    margin-left: 100px;
+}
