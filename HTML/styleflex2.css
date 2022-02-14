@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    background-color: #98a0a8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container{
+    width: 1000px;
+    margin: auto;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product { 
+    margin-top: 15px;
+    width: 200px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*h4{
+    display: inline-block;
+}*/
