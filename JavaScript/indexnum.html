@@ -8,7 +8,12 @@
 </head>
 <body>
     <script>
-        console.log('Hola CourseIt')
+        const kids = 3
+        const candies = 10
+        const candiesForKid = Math.floor(candies / kids)
+        const candiesForParent = candies % kids
+        console.log(`Cada chico recibe ${candiesForKid}`)
+        console.log(`El padre recibe ${candiesForParent}`)
     </script>
 </body>
 </html>
