@@ -212,46 +212,44 @@
     //console.log(nextPalindrome(56765))
 ////////////////////////////////////////////////////////////////
     function intToRoman(num) { 
-	    let numstr = num.toString()
-        console.log(numstr)
+        if (num==0){
+            return 'N'
+        }
+        let numstr = num.toString()
         let numarr = numstr.split('')
         numarr.reverse()
-        console.log(numarr)
         const length = numarr.length
         let romano = []
-        if (numarr[0] == 1){romano.unshift('I')
-        } else if (numarr[0] == 2 ) {romano.unshift('II')
-        } else if (numarr[0] == 3 ) {romano.unshift('III')
-        } else if (numarr[0] == 4 ) {romano.unshift('IV')
-        } else if (numarr[0] == 5 ) {romano.unshift('V')
-        } else if (numarr[0] == 6 ) {romano.unshift('V')
-        } else if (numarr[0] == 7 ) {romano.unshift('V')
-        } else if (numarr[0] == 8 ) {romano.unshift('VIII')
-        } else if (numarr[0] == 9 ) {romano.unshift('IX')
-        }
-        if (numarr[1]== 1){romano.unshift('X')
-        } else if (numarr[1] == 2 ) {romano.unshift('XX')
-        } else if (numarr[1] == 3 ) {romano.unshift('XXX')
-        } else if (numarr[1] == 4 ) {romano.unshift('XL')
-        } else if (numarr[1] == 5 ) {romano.unshift('L')
-        } else if (numarr[1] == 6 ) {romano.unshift('LX')
-        } else if (numarr[1] == 7 ) {romano.unshift('LXX')
-        } else if (numarr[1] == 8 ) {romano.unshift('LXXX')
-        } else if (numarr[1] == 9 ) {romano.unshift('XC')
-        }
-        if (numarr[2]== 1){romano.unshift('C')
-        } else if (numarr[2] == 2 ) {romano.unshift('CC')
-        } else if (numarr[2] == 3 ) {romano.unshift('CCC')
-        } else if (numarr[2] == 4 ) {romano.unshift('CD')
-        } else if (numarr[2] == 5 ) {romano.unshift('D')
-        } else if (numarr[2] == 6 ) {romano.unshift('DC')
-        } else if (numarr[2] == 7 ) {romano.unshift('CDD')
-        } else if (numarr[2] == 8 ) {romano.unshift('CDDD')
-        } else if (numarr[2] == 9 ) {romano.unshift('M')
-        }
+        if (numarr[0] == 1){romano.unshift('I')} 
+        else if (numarr[0] == 2 ) {romano.unshift('II')}
+        else if (numarr[0] == 3 ) {romano.unshift('III')} 
+        else if (numarr[0] == 4 ) {romano.unshift('IV')}
+        else if (numarr[0] == 5 ) {romano.unshift('V')} 
+        else if (numarr[0] == 6 ) {romano.unshift('VI')} 
+        else if (numarr[0] == 7 ) {romano.unshift('VII')} 
+        else if (numarr[0] == 8 ) {romano.unshift('VIII')} 
+        else if (numarr[0] == 9 ) {romano.unshift('IX')}
+        if (numarr[1]== 1){romano.unshift('X')} 
+        else if (numarr[1] == 2 ) {romano.unshift('XX')} 
+        else if (numarr[1] == 3 ) {romano.unshift('XXX')} 
+        else if (numarr[1] == 4 ) {romano.unshift('XL')} 
+        else if (numarr[1] == 5 ) {romano.unshift('L')} 
+        else if (numarr[1] == 6 ) {romano.unshift('LX')} 
+        else if (numarr[1] == 7 ) {romano.unshift('LXX')} 
+        else if (numarr[1] == 8 ) {romano.unshift('LXXX')} 
+        else if (numarr[1] == 9 ) {romano.unshift('XC')}
+        if (numarr[2]== 1){romano.unshift('C')}
+        else if (numarr[2] == 2 ) {romano.unshift('CC')} 
+        else if (numarr[2] == 3 ) {romano.unshift('CCC')}
+        else if (numarr[2] == 4 ) {romano.unshift('CD')}
+        else if (numarr[2] == 5 ) {romano.unshift('D')}
+        else if (numarr[2] == 6 ) {romano.unshift('DC')} 
+        else if (numarr[2] == 7 ) {romano.unshift('DCC')}
+        else if (numarr[2] == 8 ) {romano.unshift('DCCC')} 
+        else if (numarr[2] == 9 ) {romano.unshift('CM')}
         return romano.join('')
     }
-    console.log(intToRoman(10))
+    console.log(intToRoman(13))
     </script>
 </body>
 </html>
