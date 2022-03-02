@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const n1 = 600
+        const n2 = 61
+        function suma(num1, num2){
+            return num1+num2
+        }
+        console.log(suma(n1,n2))
+
+        function par(num1){
+            if (num1%2 == 0){
+                return('Es par')
+            } else{
+                return('No es par')
+            }
+        }
+        console.log(par(n1))
+
+        function multiploTresOCinco(num1){
+            if (num1%3 == 0 || num1%5 == 0){
+                return true
+            } else {
+                return false
+            }
+        }
+        console.log(multiploTresOCinco(n1))
+
+        function diasMes(mes){
+            switch(mes){
+                case "Enero":
+                    return 31;
+                break
+                case "Febrero":
+                    return 28;
+                break
+                case "Marzo":
+                    return 31;
+                break
+                case "Abril":
+                    return 30;
+                break
+                case "Mayo":
+                    return 31;
+                break
+                case "Junio":
+                    return 30;
+                break
+                case "Julio":
+                    return 31;
+                break
+                case "Agosto":
+                    return 31;
+                break
+                case "Septiembre":
+                    return 30;
+                break
+                case "Octubre":
+                    return 31;
+                break
+                case "Noviembre":
+                    return 30;
+                break
+                case "Diciembre":
+                    return 31;
+                break
+            }
+        }
+        console.log(diasMes("Octubre"))
+///////////////////////////////////////////////////
+    function insertPosition(arr, num) { 
+        let posicion = 0
+	    arr.forEach(function devolverposicion(value, index) {
+  	        if (value == num){
+                posicion = index;
+            } else if(value < num){
+                posicion = index + 1
+            }
+        })
+        return posicion
+}
+
+    let array1 = [1,5,6,9,12,51,86]
+    let num3 = 7
+    console.log(insertPosition(array1,num3))
+/////////////////////////////////////
+    console.log('Ej usuario')
+    function findHandler(str) { 
+	    let pos1 = str.indexOf('@')
+        let strcortada = str.slice(pos1)
+        let pos2 = strcortada.indexOf(' ')
+        if (pos2 == -1){
+            usuario = strcortada
+        } else {
+            usuario = strcortada.slice(0,pos2)
+        }
+        return usuario
+    }
+
+    console.log(findHandler('probando el buscador @gianstorani de arrobas'))
+
+///////////////////////////////////////////////
+    function findDuplicates(arr) { 
+        let duplicated = []
+        let length = arr.length
+        for (var i = 0; i <length-1; i++){
+            //console.log('valor i : '+arr[i] +' posicion: '+ i)
+            for (var j = i+1; j < length; j++){
+                //console.log('valor j: '+arr[j] +' posicion: '+ j)
+                if (arr[i] === arr[j]){
+                    if (duplicated.indexOf(arr[i]) < 0){
+                        duplicated.push(arr[i])
+                    }
+                    //console.log('Estado actual de duplicated'+duplicated)
+                }
+            }
+        }
+        return duplicated
+    }
+    
+    console.log(findDuplicates([1,2,1,3,4,5,6,1,9,0,3,4,4]))
+
+////////////////////////////////////////////////////////
+
+    function unique(arr) { 
+      let unicos = []
+      const length = arr.length
+      for (var i = 0; i <length; i++){
+        let unico = true
+        for (var j = 1; j < length; j++){
+          if (i!=j){
+            if (arr[i] == arr[j]){
+              unico = false 
+            }
+          }
+        }
+        if (unico){
+        unicos.push(arr[i])
+      	}
+      }
+
+    	return unicos
+    }
+
+    console.log(unique([-1, 'a', 'b', 'a', 0]))
+
+/////////////////////////////////////////////////////////////////
+
+    function twoNumbers(arr, result) { 
+        const length = arr.length
+        let suma = []
+        for (var i = 0; i <length-1; i++){
+            for (var j = i+1; j < length; j++){
+                if (arr[i]+arr[j] == result){
+                    suma.push(arr[i])
+                    suma.push(arr[j])
+                return suma
+                }
+            }
+        }
+    }
+    
+    console.log(twoNumbers([2, 7, 11, 15], 9))
+///////////////////////////////////////////////////////////////////
+
+    function binarySearch(arr, numToFind) { 
+        const length = arr.length
+        for (var i = 0; i <length; i++){
+            if (arr[i]==numToFind)
+            return i+1
+    }
+    }
+    console.log(binarySearch([2, 5, 8, 12, 23, 38, 56, 72, 91], 23))
+////////////////////////////////////////////////////////////////////
+    //
+    //
+    //function nextPalindrome(n) { 
+    //    let num5 = n
+    //    let numtext = n.toString()
+    //    let numtextsep = numtext
+    //    let numtextseprev = numtext
+    //    let n1 = numtextsep.split('')
+    //    let n2 = numtextseprev.split('')
+    //    n2.reverse()
+    //    console.log(`este de acaNum original ${n1} num reverse ${n2}`)
+    //    palindromo = false
+    //    if (n1 == n2){
+    //        console.log(`el numero es palindromo`)
+    //        return num5
+    //    } else {
+    //        while(palindromo = false){
+    //            num5 = num5 + 1
+    //            let numtext = n.toString()
+    //            let numtextreverse = numtext
+    //            numtextreverse.reverse
+    //            if (n1 == n2){
+    //                palindromo = true
+    //            }
+    //        }
+    //        //console.log(`Num original ${n1} num reverse ${n2}`)
+    //        return num5
+    //    }
+    //}
+//
+    //console.log(nextPalindrome(56765))
+////////////////////////////////////////////////////////////////
+    function intToRoman(num) { 
+	    let numstr = num.toString()
+        console.log(numstr)
+        let numarr = numstr.split('')
+        numarr.reverse()
+        console.log(numarr)
+        const length = numarr.length
+        let romano = []
+        if (numarr[0] == 1){romano.unshift('I')
+        } else if (numarr[0] == 2 ) {romano.unshift('II')
+        } else if (numarr[0] == 3 ) {romano.unshift('III')
+        } else if (numarr[0] == 4 ) {romano.unshift('IV')
+        } else if (numarr[0] == 5 ) {romano.unshift('V')
+        } else if (numarr[0] == 6 ) {romano.unshift('V')
+        } else if (numarr[0] == 7 ) {romano.unshift('V')
+        } else if (numarr[0] == 8 ) {romano.unshift('VIII')
+        } else if (numarr[0] == 9 ) {romano.unshift('IX')
+        }
+        if (numarr[1]== 1){romano.unshift('X')
+        } else if (numarr[1] == 2 ) {romano.unshift('XX')
+        } else if (numarr[1] == 3 ) {romano.unshift('XXX')
+        } else if (numarr[1] == 4 ) {romano.unshift('XL')
+        } else if (numarr[1] == 5 ) {romano.unshift('L')
+        } else if (numarr[1] == 6 ) {romano.unshift('LX')
+        } else if (numarr[1] == 7 ) {romano.unshift('LXX')
+        } else if (numarr[1] == 8 ) {romano.unshift('LXXX')
+        } else if (numarr[1] == 9 ) {romano.unshift('XC')
+        }
+        if (numarr[2]== 1){romano.unshift('C')
+        } else if (numarr[2] == 2 ) {romano.unshift('CC')
+        } else if (numarr[2] == 3 ) {romano.unshift('CCC')
+        } else if (numarr[2] == 4 ) {romano.unshift('CD')
+        } else if (numarr[2] == 5 ) {romano.unshift('D')
+        } else if (numarr[2] == 6 ) {romano.unshift('DC')
+        } else if (numarr[2] == 7 ) {romano.unshift('CDD')
+        } else if (numarr[2] == 8 ) {romano.unshift('CDDD')
+        } else if (numarr[2] == 9 ) {romano.unshift('M')
+        }
+        return romano.join('')
+    }
+    console.log(intToRoman(10))
+    </script>
+</body>
+</html>
